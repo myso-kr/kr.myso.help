@@ -1,8 +1,29 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34244354-6"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-34244354-6');</script>
+    <title>최원</title>
+    <meta name="description" content="어플리케이션 기획/개발 프리랜서 360도 VR 미디어 크리에이터">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="최원">
+    <meta property="og:description" content="어플리케이션 기획/개발 프리랜서 360도 VR 미디어 크리에이터">
+    <meta property="og:url" content="https://blog.myso.kr{{ page.url }}">
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/1237913">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cw4196">
+    <meta name="twitter:title" content="최원">
+    <meta name="twitter:description" content="어플리케이션 기획/개발 프리랜서 360도 VR 미디어 크리에이터">
+    <meta property="profile:first_name" content="Won">
+    <meta property="profile:last_name" content="Choi">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.2/URI.min.js" integrity="sha256-4G6Z1Q3FCGF8hoYV4zb54OENwcZkuE0NnvblFsJTg7s=" crossorigin="anonymous"></script>
     <script>
-      location.href = 'https://talk.naver.com/wc46ty?frm=pblog&ref=' + encodeURIComponent(document.referrer)
+      var uri = URI("{{ site.redirection_url }}").search(location.search).hash(location.hash);
+      uri.setSearch('frm', 'website');
+      uri.setSearch('ref', uri.search(true).proxyReferer || document.referrer);
+      window.location.replace(uri.href());
     </script>
   </head>
 </html>
